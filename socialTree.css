@@ -1,0 +1,124 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --body-bg-color: #FAF7FD;
+  --purple: #bd90e9ea;
+}
+body{
+  background-color: var(--body-bg-color);
+  color: var(--purple);
+  font-family: 'Roboto', sans-serif;
+}
+.contains{
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img:hover{
+  transform: scale(1.1);
+}
+.contains .img{
+  margin-bottom: 20px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 2px solid var(--purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contains figure span img{
+  width: 180px;
+  border-radius: 50%;
+  position: absolute;
+}
+.contains figcaption{
+  font-size: 1rem;
+  margin: 15px 0 0;
+}
+.links a:hover{
+  transform: scale(1.1);
+}
+.contains .links{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contains .links a{
+  width: 100%;
+  height: 49px;
+  margin: 15px 5px 16px;
+  line-height: 49px;
+  border: 2px solid var(--purple);
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--purple);
+  font-weight: 600;
+} 
+.contains .links .insta{
+  display: inline;
+  position: relative;
+  right: 10px;
+  top:5px
+}
+.contains .links .twitter{
+  display: inline;
+  position: relative;
+  right: 20px;
+  top:5px
+}
+.contains .links .git{
+  display: inline;
+  position: relative;
+  right: 27px;
+  top:5px
+}
+.contains .links .twitch{
+  display: inline;
+  position: relative;
+  right: 27px;
+  top:5px
+}
+.contains .links .linkedin{
+  display: inline;
+  position: relative;
+  right: 27px;
+  top:5px
+}
+/*Animation*/
+.contains figure{
+    animation: fromTop .7s 1s backwards;
+}
+main section{
+  animation: fromBottom .7s 0.5s backwards;
+} 
+@keyframes fromTop{
+  from{
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fromBottom{
+  from{
+    opacity: 0;
+    transform: translateY(30);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
